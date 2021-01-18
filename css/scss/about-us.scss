@@ -1,0 +1,172 @@
+@import 'common.scss', 'header.scss', 'footer.scss';
+
+body {
+    background-color: color('background-ivory');
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+.top-container {
+    display: flex;
+    justify-content: space-between;
+
+    .corner-purple-blob {
+        width: 15%;
+        height: 4em;
+    
+        img {
+            height: 13em;
+        }
+    }
+    
+    .corner-pink-blob {
+        width: 15%;
+        height: 4em;
+        display: flex;
+    
+        img {
+            justify-self: end;
+            height: 15em;
+            margin-left: auto;
+        }
+    }
+}
+
+.middle-container {
+    display: flex;
+    justify-content: space-evenly;
+
+    .pink-wave {
+        position: absolute;
+        left: 0;
+        z-index: -1;
+        margin-top: 15em;
+        img {
+            width: 120em;
+        }    
+    }
+}
+
+.about-us-section {
+    color: color('dark-blue-violet');
+    text-align: left;
+    padding: 2em;
+    height: fit-content;
+    width: 35em;
+    margin-top: 8em;
+    margin-left: 15em;
+
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 1em;
+    }
+
+    p {
+        line-height: 1.5em;
+    }
+}
+
+.contact-bubble {
+    color: white;
+    margin-top: 17em;
+    margin-right: 10em;
+    height: fit-content;
+    width: 25em;
+
+    .contact-us-svg {
+        width: 30em;
+        z-index: 0;
+        position: absolute;
+        top: 15em;
+    }  
+
+    .contact-us-content {
+        z-index: 2;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-left: 7em;
+    
+        h2 {
+            font-size: 1.2em;
+            margin-bottom: 1em;
+        }
+    
+        p {
+            margin-bottom: 1em;
+        }
+    
+        h3 {
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+    
+        .social-media {
+            display: flex;
+            justify-content: space-evenly;
+            height: 2em;
+            width: fit-content;
+            a img {
+                height: 3em;
+                margin: 0.5em 1em 1em 0;
+            }
+        }
+    }
+}
+
+.footer-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+@media screen and (max-width: 950px) {
+    body {
+        font-size: 0.8em;
+        overflow-y: scroll;
+    }
+
+    .top-container .corner-pink-blob {
+        display: none;
+    }
+
+    .middle-container{
+        flex-direction: column;
+        align-items: center;
+
+        .pink-wave {
+            display: none;
+            // align-self: flex-end;
+            // justify-self: flex-end;
+            // bottom: 0;
+        }
+    }
+
+    .about-us-section {
+        margin-left: 2em;
+        margin-top: 5em;
+        font-size: 1.2em;
+    }
+
+    .contact-bubble {
+        margin-top: 8em;
+        margin-left: 10em;
+
+        .contact-us-svg {
+            margin-top: 20em;
+        }
+    }
+
+    .footer-container {
+        display: none;
+    }
+
+
+}

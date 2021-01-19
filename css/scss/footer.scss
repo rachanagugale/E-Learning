@@ -35,7 +35,7 @@
     .footer-container {
         .footer-logo {
             width: fit-content;
-            margin: 5em;
+            margin: 5vw;
             padding: 0;
     
             img {
@@ -43,8 +43,11 @@
             }
         }
 
-        .footer-nav {
-            font-size: 1.2em;
+        .footer-container .footer-nav {           
+            width: fit-content;
+            a {
+                font-size: 3em;
+            }
         }
     }
 }

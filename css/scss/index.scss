@@ -1,4 +1,4 @@
-@import 'common.scss', 'header.scss', 'footer.scss';
+@import 'common.scss', 'header.scss','instant-search.scss', 'footer.scss';
 
 body {
     background-color: color('background-ivory');
@@ -203,23 +203,32 @@ body {
 
         .hero-section {
             font-size: 1.2em;
-            width: 40em;
+            max-width: 50em;
+            width: fit-content;
         }
     }
 
     .cards-container {
         margin-top: 10em;
-        margin-bottom: 10em;
-        .center-bubbles {
-            width: fit-content;
-            height: fit-content;
-            justify-self: flex-start;
-            margin-left: -20em;
+        margin-bottom: 2em;
 
-            img {
-                height: 100em;
-                width: fit-content;
-            }
+        .center-bubbles {
+            // width: fit-content;
+            // height: fit-content;
+            // justify-self: flex-start;
+            // margin-left: -20em;
+
+            // clip-path: inset(0 0 10px 10px);
+            // clip-path: circle(100px);
+            // clip-path: polygon(0% 0%, 40% 0%, 40% 100%, 0% 100%);
+            // background-color: purple;
+            width: 100vw;
+            overflow-x: hidden;
+
+            // img {
+            //     height: 100em;
+            //     width: fit-content;
+            // }
         }
 
         .cards {
